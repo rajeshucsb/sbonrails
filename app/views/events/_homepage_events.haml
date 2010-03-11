@@ -1,7 +1,7 @@
 %h3
     Events
     %small
-        = link_to "<span>Add +</span>", new_event_path, :class => 'small blue button', :id => 'addEvent' if current_user
+        = small_button "Add +", new_event_path, :color => 'blue', :id => 'addEvent' if current_user
 
 %ul.homepage-list#events
     - @events.each do |event|
