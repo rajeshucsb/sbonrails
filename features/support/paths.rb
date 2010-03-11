@@ -14,6 +14,9 @@ module NavigationHelpers
     when /the add presentation idea page/
       new_presentation_path
 
+    when /the add event page/
+      new_event_path
+
     # Add more page name => path mappings here
 
     else

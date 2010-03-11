@@ -9,20 +9,11 @@
 
 .row
     .three-and-a-half.columns.first
-        = render :partial => 'presentations/presentation_ideas'
+        = render :partial => 'presentations/homepage_presentation_ideas'
 
     .three-and-a-half.columns
-        = render :partial => 'presentations/past_presentations'
+        = render :partial => 'presentations/homepage_past_presentations'
 
     .two-and-a-half.columns
-        %h3
-            Events
-            %small
-                = link_to "<span>Add +</span>", new_event_path, :class => 'small blue button' if current_user
-
-        %ul.homepage-list
-            - @events.each do |event|
-                %li
-                    = event.name + " - "
-                    = event.the_date.strftime('%b %d')
+        = render :partial => 'events/homepage_events'
 
