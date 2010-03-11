@@ -1,0 +1,17 @@
+%h3
+    Presentation Ideas
+    %small
+        = link_to "<span>Add +</span>", new_presentation_path, :class => 'small blue button' if current_user
+
+%ul.homepage-list#presentationIdeas
+    - @presentation_ideas.each do |idea|
+        %li
+            = link_to idea.title, presentation_path(idea)
+            %span.actions
+                = render_like_link(idea)
+                %span.num-likes
+                    = idea.num_likes
+
+%p
+    = link_to "See More &raquo;", presentation_ideas_path
+
