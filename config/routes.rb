@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.past_presentations "/presentations/past", :controller => 'presentations', :action => 'past'
   map.resources :presentations
   map.resources :likes
+  map.resources :events
   map.resource :session
 
   map.sign_up 'sign_up', :controller => 'users', :action => 'new'
