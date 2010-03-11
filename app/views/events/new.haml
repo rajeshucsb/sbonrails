@@ -1,0 +1,21 @@
+.page-title
+    %h2 Add an Event
+    %hr
+
+= error_messages_for :event
+- form_for @event, :html => {:class => 'special-labels'} do |form|
+    = form.hidden_field :user_id, :value => current_user.id
+
+    %span.wrap
+        = form.label :name
+        = form.text_field :name
+
+
+    = form.date_select :the_date
+
+    %br
+
+
+    %button.large.blue.button
+        <span>Suggest Presentation</span>
+
