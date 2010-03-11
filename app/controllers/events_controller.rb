@@ -18,8 +18,8 @@ class EventsController < ApplicationController
       flash[:success] = "Event added sucessfully"
       redirect_to root_url
     else
-      flash[:error] = "There was a problem adding the event"
-      redirect_to root_url
+      flash[:error] = errors_for(@event)
+      redirect_to :action => 'new'
     end
 
   end
