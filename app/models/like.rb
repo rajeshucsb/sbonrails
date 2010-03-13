@@ -9,8 +9,11 @@ class Like < ActiveRecord::Base
   end
 
   def already_liked?
-    !Like.find(:all, :conditions => { :user_id => user_id,
-                                     :presentation_id => presentation_id }).empty?
+    self.class.exists?(:user_id => user_id, :presentation_id => presentation_id)
+  end
+
+  def self.find_or_create( user, presentation )
+    find_or_create_by_user_id_and_presentation_id( user.to_param, presentation.to_param )
   end
 
 end

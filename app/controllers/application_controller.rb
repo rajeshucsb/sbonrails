@@ -12,11 +12,7 @@ class ApplicationController < ActionController::Base
 
 
   def errors_for(obj)
-    str = ""
-    obj.errors.each do |error|
-      str += error.join(" ")
-    end
-    str
+    obj.errors.join(" ")
   end
 
 end
