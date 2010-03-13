@@ -9,5 +9,15 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+
+  def errors_for(obj)
+    str = ""
+    obj.errors.each do |error|
+      str += error.join(" ")
+    end
+    str
+  end
+
 end
 

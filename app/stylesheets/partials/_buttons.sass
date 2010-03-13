@@ -55,36 +55,27 @@
 // COLORS
 // ---------------------------------------
 
-.blue.button
-    :background-color = !blue
+= button-color(!color)
+    :background-color = !color
     &:hover
-        +lighten(!blue)
+        +lighten(!color)
     &:active
-        :background-color = !blue
+        :background-color = !color
 
-
+.blue.button
+    +button-color(!blue)
 
 .red.button
-    :background-color = !red
-    &:hover
-        +lighten(!red)
-    &:active
-        :background-color = !red
+    +button-color(!red)
+
+.green.button
+    +button-color(!green)
 
 .dark-gray.button
-    :background-color = !dark_gray
-    &:hover
-        +lighten(!dark_gray)
-    &:active
-        :background-color = !dark_gray
+    +button-color(!dark_gray)
 
 .medium-gray.button
-    :background-color #454545
-    &:hover
-        +lighten(#454545)
-    &:active
-        :background-color = #454545
-
+    +button-color(#454545)
 
 .light-gray.button
     :background-color = !gray

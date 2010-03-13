@@ -4,7 +4,8 @@ class UserTest < ActiveSupport::TestCase
   should_have_many :presentations,
                    :created_presentations,
                    :likes,
-                   :liked_presentation_ideas
+                   :liked_presentation_ideas,
+                   :events
 
 
    context "users who like some presentations" do
