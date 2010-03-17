@@ -11,9 +11,8 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
 
-  def errors_for(obj)
-    obj.errors.join(" ")
+  def self.errors_for(obj)
+    obj.errors.full_messages.map { |msg| "<span>#{CGI::escapeHTML msg}</span>" }.join("<br />\n")
   end
 
 end
-

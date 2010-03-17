@@ -18,7 +18,7 @@ class EventsController < ApplicationController
       flash[:success] = "Event added sucessfully"
       redirect_to root_url
     else
-      flash[:error] = errors_for(@event)
+      flash[:error] = self.class.errors_for(@event)
       redirect_to :action => 'new'
     end
 
