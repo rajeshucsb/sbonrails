@@ -1,5 +1,5 @@
 .header
-    %a{ :href => root_url }
+    %a{ :href => root_url, :class => "logo-link" }
         %h1.logo
             %span on
             Rails
@@ -24,3 +24,4 @@
                 = link_to "sign out", sign_out_path
             - else
                 = link_to "sign in", sign_in_path, :class => ( 'active' if controller.controller_name == 'sessions' )
+
