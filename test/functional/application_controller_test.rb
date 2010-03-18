@@ -10,7 +10,8 @@ class ApplicationControllerTest < ActionController::TestCase
 
     should "escape HTML" do
       result = @controller.class.errors_for(@model)
-      assert_equal "<span>is invalid &amp; all</span><br />\n<span>Name is already taken</span>", result
+      assert_equal "<div>is invalid &amp; all</div>\n<div>Name is already taken</div>", result
     end
   end
 end
+

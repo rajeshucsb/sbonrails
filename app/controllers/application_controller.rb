@@ -12,7 +12,8 @@ class ApplicationController < ActionController::Base
 
 
   def self.errors_for(obj)
-    obj.errors.full_messages.map { |msg| "<span>#{CGI::escapeHTML msg}</span>" }.join("<br />\n")
+    obj.errors.full_messages.map { |msg| "<div>#{CGI::escapeHTML msg}</div>" }.join("\n")
   end
 
 end
+
