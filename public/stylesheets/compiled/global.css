@@ -205,7 +205,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
 /* line 5, ../../../app/stylesheets/partials/_buttons.sass */
 .button {
   display: inline-block;
-  padding: 0px;
+  padding: 0;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -219,8 +219,9 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   cursor: pointer;
   outline: none;
   font-family: Arial, sans-serif;
-  letter-spacing: 0; }
-  /* line 20, ../../../app/stylesheets/partials/_buttons.sass */
+  letter-spacing: 0;
+  overflow: hidden; }
+  /* line 21, ../../../app/stylesheets/partials/_buttons.sass */
   .button span {
     padding: 5px 18px 6px 18px;
     display: block;
@@ -233,8 +234,8 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
     -moz-box-shadow: inset 0 15px 5px rgba(255, 255, 255, 0.1), inset 0px -10px 12px rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: inset 0 15px 5px rgba(255, 255, 255, 0.1), inset 0px -10px 12px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 15px 5px rgba(255, 255, 255, 0.1), inset 0px -10px 12px rgba(0, 0, 0, 0.2);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(255,255,255,.15)   ), to( rgba(0,0,0,.4) )); }
-  /* line 32, ../../../app/stylesheets/partials/_buttons.sass */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(255,255,255,.10)   ), to( rgba(0,0,0,.15) )); }
+  /* line 33, ../../../app/stylesheets/partials/_buttons.sass */
   .button:active span {
     border: rgba(0,0,0,.25) 1px solid;
     border-bottom: none;
@@ -243,47 +244,47 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
     box-sahdow: inset 0 5px 10px rgba(0, 0, 0, 0.4);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(0,0,0,.4)   ), to( rgba(0,0,0,.1)  )); }
 
-/* line 39, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 40, ../../../app/stylesheets/partials/_buttons.sass */
 .button:hover {
   color: #fff; }
 
-/* line 42, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 43, ../../../app/stylesheets/partials/_buttons.sass */
 .button.inactive {
   cursor: default; }
 
-/* line 50, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 51, ../../../app/stylesheets/partials/_buttons.sass */
 .mega.button {
   font-size: 30px;
   margin-top: 20px;
   margin-right: 30px;
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px; }
-  /* line 56, ../../../app/stylesheets/partials/_buttons.sass */
+  /* line 57, ../../../app/stylesheets/partials/_buttons.sass */
   .mega.button span {
     -moz-border-radius: 30px;
     -webkit-border-radius: 30px; }
 
-/* line 59, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 60, ../../../app/stylesheets/partials/_buttons.sass */
 .large.button {
   font-size: 20px;
   margin-top: 20px;
   margin-right: 20px; }
 
-/* line 64, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 65, ../../../app/stylesheets/partials/_buttons.sass */
 .small.button {
   font-size: 14px; }
-  /* line 66, ../../../app/stylesheets/partials/_buttons.sass */
+  /* line 67, ../../../app/stylesheets/partials/_buttons.sass */
   .small.button span {
     padding: 3px 12px 4px 12px; }
 
-/* line 70, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 71, ../../../app/stylesheets/partials/_buttons.sass */
 .micro.button {
   font-size: 12px; }
-  /* line 72, ../../../app/stylesheets/partials/_buttons.sass */
+  /* line 73, ../../../app/stylesheets/partials/_buttons.sass */
   .micro.button span {
     padding: 3px 10px 4px 10px; }
 
-/* line 80, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 81, ../../../app/stylesheets/partials/_buttons.sass */
 .blue.button {
   background-color: #0070c3; }
   /* line 29, ../../../app/stylesheets/partials/_mixins.sass */
@@ -293,7 +294,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   .blue.button:active {
     background-color: #0070c3; }
 
-/* line 83, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 84, ../../../app/stylesheets/partials/_buttons.sass */
 .green.button {
   background-color: #7c9f1f; }
   /* line 29, ../../../app/stylesheets/partials/_mixins.sass */
@@ -303,7 +304,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   .green.button:active {
     background-color: #7c9f1f; }
 
-/* line 86, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 87, ../../../app/stylesheets/partials/_buttons.sass */
 .orange.button {
   background-color: orange; }
   /* line 29, ../../../app/stylesheets/partials/_mixins.sass */
@@ -313,7 +314,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   .orange.button:active {
     background-color: orange; }
 
-/* line 90, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 91, ../../../app/stylesheets/partials/_buttons.sass */
 .red.button {
   background-color: #aa1818; }
   /* line 29, ../../../app/stylesheets/partials/_mixins.sass */
@@ -323,7 +324,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   .red.button:active {
     background-color: #aa1818; }
 
-/* line 93, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 94, ../../../app/stylesheets/partials/_buttons.sass */
 .dark-gray.button {
   background-color: #333333; }
   /* line 29, ../../../app/stylesheets/partials/_mixins.sass */
@@ -333,17 +334,17 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   .dark-gray.button:active {
     background-color: #333333; }
 
-/* line 96, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 97, ../../../app/stylesheets/partials/_buttons.sass */
 .medium-gray.button {
   background-color: #454545; }
-  /* line 98, ../../../app/stylesheets/partials/_buttons.sass */
+  /* line 99, ../../../app/stylesheets/partials/_buttons.sass */
   .medium-gray.button:hover {
     background-color: #787878; }
-  /* line 100, ../../../app/stylesheets/partials/_buttons.sass */
+  /* line 101, ../../../app/stylesheets/partials/_buttons.sass */
   .medium-gray.button:active {
     background-color: #454545; }
 
-/* line 104, ../../../app/stylesheets/partials/_buttons.sass */
+/* line 105, ../../../app/stylesheets/partials/_buttons.sass */
 .light-gray.button {
   background-color: #cccccc;
   text-shadow: none;
@@ -418,7 +419,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, li {
   -moz-box-shadow: inset 0 15px 5px rgba(255, 255, 255, 0.05), inset 0px -10px 12px rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: inset 0 15px 5px rgba(255, 255, 255, 0.05), inset 0px -10px 12px rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 15px 5px rgba(255, 255, 255, 0.05), inset 0px -10px 12px rgba(0, 0, 0, 0.25);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(255,255,255,.15)   ), to( rgba(0,0,0,.4) )); }
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(255,255,255,.10)   ), to( rgba(0,0,0,.15) )); }
   /* line 23, ../../../app/stylesheets/partials/_flash.sass */
   .flash-item.success {
     background-color: #7c9f1f; }
