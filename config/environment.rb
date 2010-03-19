@@ -6,6 +6,7 @@ Rails::Initializer.run do |config|
   config.gem 'compass', :version => '>= 0.8.17'
   config.gem 'haml', :version => '>=2.2.16'
   config.gem "clearance"
+  config.gem "aasm"
   config.time_zone = 'UTC'
 end
 

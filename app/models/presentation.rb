@@ -1,4 +1,18 @@
 class Presentation < ActiveRecord::Base
+  include AASM
+  aasm_column :state
+  aasm_initial_state :idea
+  aasm_state :idea
+  aasm_state :upcoming
+  aasm_state :archived
+
+  aasm_event :set_upcoming do
+    transitions :to => :upcoming, :from => :idea
+  end
+
+  aasm_event :presentation_date_has_passed do
+    transitions :to => :archived, :from => :upcoming
+  end
 
   validates_presence_of :title, :owner_id
   validates_uniqueness_of :title, :scope => [:presenter_id, :owner_id]
