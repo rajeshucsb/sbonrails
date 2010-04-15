@@ -29,9 +29,8 @@ class PresentationsController < ApplicationController
       flash[:success] = "Presentation was saved successfully"
       redirect_to root_url
     else
-      flash[:error] = "There was an error saving your presentation"
-      render :action => 'new'
-
+      flash[:error] = self.class.errors_for(@presentation)
+      redirect_to :action => 'new'
     end
   end
 

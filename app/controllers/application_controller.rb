@@ -9,5 +9,11 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+
+  def self.errors_for(obj)
+    obj.errors.full_messages.map { |msg| "<div>#{CGI::escapeHTML msg}</div>" }.join("\n")
+  end
+
 end
 

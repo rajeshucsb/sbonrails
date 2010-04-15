@@ -2,31 +2,18 @@
 
 
 .five.centered.extra-margin
-    = link_to "<span>Get Directions &raquo;</span>",google_maps_appfolio_url, :class => "large red button", :target => '_blank'
-    = link_to "<span>Join SB on Rails &raquo;</span>", sign_up_path, :class => "large blue button" unless current_user
+    = large_button "Get Directions",google_maps_appfolio_url, :color => 'red', :target => '_blank'
+    = large_pulsating_button "Join SB on Rails",sign_up_path, :color => "blue" unless current_user
 
 
 
 .row
     .three-and-a-half.columns.first
-        = render :partial => 'presentations/presentation_ideas'
+        = render :partial => 'presentations/homepage_presentation_ideas'
 
     .three-and-a-half.columns
-        = render :partial => 'presentations/past_presentations'
+        = render :partial => 'presentations/homepage_past_presentations'
 
     .two-and-a-half.columns
-        %h3 Upcoming Events
-
-        %ul.homepage-list
-            %li
-                Working with Git
-            %li
-                Using Chef with Rails
-            %li
-                Lightning Talks
-            %li
-                Testing with Cucumber
-
-        %p
-            = link_to "See More &raquo;", "#"
+        = render :partial => 'events/homepage_events'
 

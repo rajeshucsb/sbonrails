@@ -69,6 +69,24 @@ class PresentationTest < ActiveSupport::TestCase
         assert_equal Presentation.sorted_by_likes_slow(:limit => 1), [@presentation_idea4]
       end
 
+      should "not transition between idea and upcoming presentation if date not present" do
+        assert_equal @presentation_idea1.state, "idea"
+        assert !@presentation_idea1.set_upcoming!
+      end
+
+      should "not transition between idea and upcoming presentation if presenter_id not present" do
+        @presentation_idea1.date = Time.now
+        assert_equal @presentation_idea1.state, "idea"
+        assert !@presentation_idea1.set_upcoming!
+      end
+
+      should "transition between idea and upcoming presentation if presenter_id and date present" do
+        @presentation_idea1.date      = Time.now
+        @presentation_idea1.presenter = @user1
+        assert_equal @presentation_idea1.state, "idea"
+        assert @presentation_idea1.set_upcoming!
+      end
+
     end
 
 

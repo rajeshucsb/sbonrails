@@ -1,0 +1,11 @@
+%h3
+    Events
+    %small
+        = small_button "Add +", new_event_path, :color => 'blue', :id => 'addEvent' if current_user
+
+%ul.homepage-list#events
+    - @events.each do |event|
+        %li
+            = event.name + " - "
+            = event.the_date.strftime('%b %d')
+

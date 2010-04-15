@@ -20,6 +20,16 @@
     :-moz-box-shadow    = "inset" 0 15px 5px !highlight_color, "inset" 0px -10px 12px !shadow_color
     :-webkit-box-shadow = "inset" 0 15px 5px !highlight_color, "inset" 0px -10px 12px !shadow_color
     :box-shadow         = "inset" 0 15px 5px !highlight_color, "inset" 0px -10px 12px !shadow_color
+    :background-image   -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(255,255,255,.10)   ), to( rgba(0,0,0,.15) ))
+
+
+
+= button-color(!color)
+    :background-color = !color
+    &:hover
+        +lighten(!color)
+    &:active
+        :background-color = !color
 
 // -------------------------
 // MENUS

@@ -16,21 +16,23 @@ class LikeTest < ActiveSupport::TestCase
       end
 
       should "form a join model between presentations and users" do
-        Like.create(:user => @user1, :presentation => @presentation_idea1 )
+        Like.create!( :user => @user1, :presentation => @presentation_idea1 )
         assert_equal @presentation_idea1, @user1.liked_presentation_ideas.first
         assert_equal @user1, @presentation_idea1.users_who_like_this.first
       end
 
       should "not allow users to like presentation multiple times" do
-        like1 = Like.new(:user => @user1, :presentation => @presentation_idea1 )
-        assert like1.valid?
-        assert like1.save
+        like1 = Like.create!( :user => @user1, :presentation => @presentation_idea1 )
 
         like2 = Like.new(:user => @user1, :presentation => @presentation_idea1 )
         assert !like2.valid?
-
       end
 
+      should "have an idempotent like" do
+        like1 = Like.find_or_create( @user1, @presentation_idea1 )
+        like2 = Like.find_or_create( @user1.id, @presentation_idea1.id )
+        assert_equal like1.id, like2.id
+      end
     end
 
 
